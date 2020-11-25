@@ -10,7 +10,7 @@ import { withTheme } from '../../core/theming';
 import { RadioButtonContext, RadioButtonContextType } from './RadioButtonGroup';
 import { handlePress } from './utils';
 import TouchableRipple from '../TouchableRipple/TouchableRipple';
-import RadioButton from './RadioButton';
+import { RadioButton } from './RadioButtonElements';
 import Text from '../Typography/Text';
 
 export type Props = {
@@ -147,7 +147,9 @@ RadioButtonItem.displayName = 'RadioButton.Item';
 export default withTheme(RadioButtonItem);
 
 // @component-docs ignore-next-line
-export { RadioButtonItem };
+const RadioButtonItemWithTheme = withTheme(RadioButtonItem);
+// @component-docs ignore-next-line
+export { RadioButtonItemWithTheme as RadioButtonItem };
 
 const styles = StyleSheet.create({
   container: {
