@@ -40,15 +40,21 @@
     "release": "release-it",
     "bootstrap": "yarn --cwd example && yarn --cwd docs && yarn",
     "docs": "yarn --cwd docs",
-    "example": "yarn --cwd example"
+    "example": "yarn --cwd example",
+    "build:netlify": "yarn bootstrap && cd example && yarn exec expo build:web"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
     "@callstack/react-theme-provider": "^3.0.5",
+    "@react-native-community/masked-view": "^0.1.10",
     "color": "^3.1.2",
-    "react-native-safe-area-view": "^0.14.9"
+    "react-native-gesture-handler": "^1.9.0",
+    "react-native-reanimated": "^1.13.2",
+    "react-native-safe-area-context": "^3.1.9",
+    "react-native-safe-area-view": "^0.14.9",
+    "react-native-screens": "^2.15.0"
   },
   "devDependencies": {
     "@babel/core": "^7.10.3",
